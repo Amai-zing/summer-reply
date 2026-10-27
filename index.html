@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サマーリプライ｜返事は、きみの言葉で。自由入力の恋愛ADV（無料）</title>
+<meta name="description" content="夏祭りまで、あと6日。ふだんの会話に選択肢はない、返事は自由入力。3人のヒロインと「自由に話して」仲良くなる恋愛アドベンチャーゲーム。Windows 版・無料。">
+<meta name="theme-color" content="#2b3a5c">
+<!-- サイトの URL（GitHub Pages）。X で共有したときの絵に使う。置き場所を変えたら、下の3か所を書きかえる -->
+<link rel="canonical" href="https://amai-zing.github.io/summer-reply/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="サマーリプライ">
+<meta property="og:title" content="サマーリプライ｜返事は、きみの言葉で。">
+<meta property="og:description" content="夏祭りまで、あと6日。3人のヒロインと「自由に話して」仲良くなる恋愛ADV。ふだんの会話に選択肢はなし、返事は自由入力。Windows 版・無料。">
+<meta property="og:url" content="https://amai-zing.github.io/summer-reply/">
+<meta property="og:image" content="https://amai-zing.github.io/summer-reply/img/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- いちばん奥に固定した背景。見出しの斜めの帯からだけ見える。スクロールに合わせて入れかわる（main.js） -->
+<div class="scene-bg" aria-hidden="true">
+  <div class="scene is-on" data-bg="img/scene_story.webp"></div>
+  <div class="scene" data-bg="img/scene_system.webp"></div>
+  <div class="scene" data-bg="img/scene_chara.webp"></div>
+  <div class="scene" data-bg="img/scene_gallery.webp"></div>
+  <div class="scene" data-bg="img/scene_stream.webp"></div>
+  <div class="scene" data-bg="img/scene_dl.webp"></div>
+</div>
+
+<header class="bar" id="bar">
+  <a class="bar-logo" href="#top" aria-label="サマーリプライ トップへ"><img src="img/logo.webp" alt="サマーリプライ" width="1100" height="247"></a>
+  <nav class="bar-nav" aria-label="ページ内の移動">
+    <a href="#story">STORY</a>
+    <a href="#system">SYSTEM</a>
+    <a href="#chara">CHARACTER</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#stream">実況・配信</a>
+  </nav>
+  <a class="bar-dl" href="#download">ダウンロード</a>
+</header>
+
+<main>
+
+<!-- ============ トップ ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-window"></div>
+    <div class="hero-sparkles"></div>
+    <!-- 3人は別々の絵を重ねている（奥から 美也子・麗華・瑞希）。出てくる順番は 瑞希→麗華→美也子 -->
+    <div class="hero-chara" id="heroChara">
+      <img class="hc-miyako" src="img/kv_miyako.webp" alt="" width="1150" height="1516">
+      <img class="hc-reika" src="img/kv_reika.webp" alt="" width="1150" height="1516">
+      <img class="hc-mizuki" src="img/kv_mizuki.webp" alt="" width="1150" height="1516" fetchpriority="high">
+    </div>
+  </div>
+  <div class="hero-in">
+    <h1 class="hero-logo"><span class="hero-word" aria-hidden="true">SUMMER<br>REPLY</span><img src="img/logo.webp" alt="サマーリプライ SUMMER REPLY" width="1100" height="247"></h1>
+    <p class="hero-catch"><span>会話に、</span><span>選択肢なんてない。</span><br><span>だから返事は、<em>君の言葉</em>で。</span></p>
+    <p class="hero-lead">会話の意味を読み取る、AIを内蔵。<br>3人のヒロインと「自由に話して」仲良くなる恋愛アドベンチャー。<br>——夏祭りまで、あと6日。君は誰と仲良くなる？<br></p>
+    <div class="hero-cta">
+      <a class="btn-dl" href="#download"><span>無料ダウンロード</span></a>
+      <p class="hero-spec">Windows 10／11 ・ 無料 <span class="js-release-hero" hidden></span></p>
+    </div>
+  </div>
+  <a class="hero-scroll" href="#story" aria-label="下へ">SCROLL</a>
+</section>
+
+<!-- ============ あらすじ ============ -->
+<section class="sec story" id="story">
+  <header class="band" data-scene="0"><span class="band-en" aria-hidden="true" style="--len:5">STORY</span><h2 class="band-ja">あらすじ</h2></header>
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="paper story-paper">
+        <p class="story-date"><mark>7月某日　放課後</mark></p>
+        <p class="gap">毎年、夏に大きな夏祭りが開かれる町・葉月町。<br>そこに住むあなた。高校2年の夏。いつも通りの日常。<br>親友の拓海が言った。</p>
+        <p class="story-quote">「土曜の夜は夏祭りだろ。今年こそ、誰か誘えよな」</p>
+        <p>去年と一昨年も夏祭りは、拓海と二人だった。<br>今年は、今年こそは誰かと行こうと決めたのだった。</p>
+        <p class="story-big gap">夏祭りまで、あと6日——</p>
+        <p>学校終わりの放課後。誰と会い、何を話すか？<br>そして、土曜日の夏祭りの夜を誰と過ごすのか？<br>それは全てあなた次第です。</p>
+      </div>
+      <ol class="cal" aria-label="6日間の予定">
+        <li><b>13</b><span>月</span></li>
+        <li><b>14</b><span>火</span></li>
+        <li><b>15</b><span>水</span></li>
+        <li><b>16</b><span>木</span></li>
+        <li><b>17</b><span>金</span></li>
+        <li class="cal-fes"><b>18</b><span>土</span><em>夏祭り</em></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ システム ============ -->
+<section class="sec system" id="system">
+  <header class="band" data-scene="1"><span class="band-en" aria-hidden="true" style="--len:6">SYSTEM</span><h2 class="band-ja">返事は、君の言葉で。</h2></header>
+  <div class="wrap">
+
+    <div class="feat-main">
+      <figure class="cheki tilt-l">
+        <img src="img/ss_talk.webp" alt="美也子との会話。入力欄に「休みの日って、いつも何してんの？」と書いている" width="1600" height="900" loading="lazy">
+        <figcaption>ヒロインへの返事は、キーボードで書いて送りましょう<br>正しく書くことで、正確に理解してくれます</figcaption>
+      </figure>
+      <div class="feat-text">
+        <p class="feat-lead">このゲームの普段の会話には、<br><strong>選択肢がありません。</strong></p>
+        <p>会話フェーズと呼ばれるモードの時、ヒロインへの返事は、自由に書いて送ります。ヒロインは、その言葉に合わせて返してくれます。ほめる・からかう・冗談・謝る・頼みごと・さまざまな言葉に、それぞれの反応が。<br>同じ相手でも、何をどう話すかで返答も反応も変わります。</p>
+        <div class="talk-demo" id="talkDemo" aria-label="会話の例">
+          <div class="td-input"><span class="td-caret" aria-hidden="true"></span><span class="td-typing"></span><button type="button" tabindex="-1" aria-hidden="true">送る</button></div>
+          <ol class="td-log">
+            <li class="td-me" data-line="休みの日って、いつも何してんの？"></li>
+            <li class="td-her" data-name="美也子" data-line="…ほとんどバイト。…たまに休みの日は、ゲーセン寄ったりするけど"></li>
+            <li class="td-me" data-line="美也子の淹れたコーヒー、今度飲んでみたいな"></li>
+            <li class="td-her" data-name="美也子" data-line="…え、アンタもコーヒー好きなの？…ふーん。…今度、淹れてあげてもいいけど"></li>
+          </ol>
+          <p class="td-note">実際のゲームの中のやりとりです</p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="feats">
+      <li class="note note-y">
+        <h3>話したことを、覚えている</h3>
+        <p>同じ会話の中で話したことを覚えていて、「さっき〜って言ってたよね」と話をつなげます。答えが変わると「あれ？さっきは…」とつっこまれることも。</p>
+      </li>
+      <li class="note note-b">
+        <button class="shot" type="button" data-full="img/ss_hint.webp" data-cap="迷ったら「今の話って？」"><img src="img/ss_hint.webp" alt="「今の話って？」で主人公の心の声のヒントが出ている画面" width="1600" height="900" loading="lazy"></button>
+        <h3>迷ったら「今の話って？」</h3>
+        <p>何を話せばいいか分からないときは、主人公の心の声でヒントが出ます。</p>
+      </li>
+      <li class="note note-p">
+        <button class="shot" type="button" data-full="img/ss_map.webp" data-cap="放課後、誰に会いに行く？"><img src="img/ss_map.webp" alt="行き先を選ぶ画面。付せんに場所が並んでいる" width="1600" height="900" loading="lazy"></button>
+        <h3>放課後、どこに行く？</h3>
+        <p>学校や町から行き先を選びます。誰がどこにいるかは、行ってみないと分かりません。<br></p>
+      </li>
+      <li class="note note-g">
+        <button class="shot" type="button" data-full="img/ss_summary.webp" data-cap="夜は、1日のまとめ"><img src="img/ss_summary.webp" alt="1日のまとめの画面。3人の仲良し度とメッセージ" width="1600" height="900" loading="lazy"></button>
+        <h3>夜は、1日のまとめ</h3>
+        <p>ヒロインからメッセージが届きます。返事を選んで送ることも。</p>
+      </li>
+    </ul>
+
+    <div class="flow-wrap">
+      <h3 class="sub">1日の流れ</h3>
+      <ol class="flow">
+        <li><b>行き先を選ぶ</b><span>学校・町の9か所から<br>一日2回まで、行動出来ます。<br>大事に行動しましょう。<br></span></li>
+        <li><b>会話する</b><span>返事は自由入力。ヒロインから質問する時もあり、自分から質問する番も</span></li>
+        <li><b>仲が深まる</b><span>他人→知り合い→友達→気になる人→特別な人。上がる手前には、本音を考えて選ぶ特別な場面もあります。</span></li>
+        <li><b>もう少し話す</b><span>会話のあとは自由におしゃべり。色々聞いてみましょう。仲良くなったら、自分の言葉でデートに誘えば。何かが起こるかも？</span></li>
+        <li><b>夜</b><span>ヒロインからのメッセージが届きます。返答すれば、喜ばれるかも？</span></li>
+      </ol>
+      <p class="flow-end">6日目の夜は<strong>夏祭り</strong>。それまでに仲を深めましょう。</p>
+    </div>
+
+    <!-- ボリューム：煽り文句＋ハンコ。見えたら、ハンコが1つずつ押される（main.js の data-reveal → is-in） -->
+    <div class="volume" data-reveal="">
+      <div class="vol-head">
+        <p class="vol-catch"><span>1周じゃ、</span><span>見きれない。</span></p>
+        <span class="vol-hanko">周回推奨</span>
+      </div>
+      <p class="vol-lead">誰に会いに行くか、何を話すかで、見られる場面もエンディングも変わります。<br>1プレイ、約１時間程度で終わります。気に入ったら2周目も遊んでみてください。<br>何度でも遊べるように、色々用意しました。</p>
+      <ul class="stamps" aria-label="ボリューム">
+        <li><span class="n"><b>3</b>人</span><span>ヒロイン</span></li>
+        <li><span class="n"><b>7</b>種</span><span>エンディング</span></li>
+        <li><span class="n"><b>29</b>枚</span><span>スチルCG</span></li>
+        <li><span class="n"><b>9</b>つ</span><span>仲が深まる場面</span></li>
+        <li><span class="n"><b>9</b>通り</span><span>放課後デート</span></li>
+      </ul>
+      <p class="vol-doodle"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M6 32 C 10 18, 22 10, 36 8"></path><path d="M28 3 L37 8 L29 14"></path></svg>ぜんぶ見るまで、何周かかる？</p>
+    </div>
+
+    <!-- AI：見えたら、AIのマーク・つながる線・吹き出しが動いて出る（data-reveal → is-in） -->
+    <aside class="ai-box" data-reveal="">
+      <div class="ai-badge" aria-hidden="true">
+        <svg viewBox="0 0 80 80">
+          <circle class="ai-ring" cx="40" cy="40" r="36"></circle>
+          <circle class="ai-core" cx="40" cy="40" r="27"></circle>
+          <text x="40" y="48.5" text-anchor="middle">AI</text>
+          <path class="ai-spark s1" d="M66 6 l2.2 5.8 5.8 2.2 -5.8 2.2 -2.2 5.8 -2.2 -5.8 -5.8 -2.2 5.8 -2.2z"></path>
+          <path class="ai-spark s2" d="M10 58 l1.6 4.2 4.2 1.6 -4.2 1.6 -1.6 4.2 -1.6 -4.2 -4.2 -1.6 4.2 -1.6z"></path>
+        </svg>
+      </div>
+      <svg class="ai-net" viewBox="0 0 200 120" aria-hidden="true">
+        <path class="ln" style="--d:.7s" d="M22 24 L86 42"></path><path class="ln" style="--d:.78s" d="M22 60 L86 42"></path><path class="ln" style="--d:.86s" d="M22 96 L86 80"></path>
+        <path class="ln" style="--d:.82s" d="M22 60 L86 80"></path><path class="ln" style="--d:1.05s" d="M86 42 L128 60"></path><path class="ln" style="--d:1.12s" d="M86 80 L128 60"></path>
+        <circle class="nd" style="--d:.6s" cx="22" cy="24" r="6"></circle><circle class="nd" style="--d:.66s" cx="22" cy="60" r="6"></circle><circle class="nd" style="--d:.72s" cx="22" cy="96" r="6"></circle>
+        <circle class="nd nd-m" style="--d:.95s" cx="86" cy="42" r="7"></circle><circle class="nd nd-m" style="--d:1s" cx="86" cy="80" r="7"></circle>
+        <path class="bubble" d="M134 34 h52 a10 10 0 0 1 10 10 v30 a10 10 0 0 1 -10 10 h-34 l-12 12 v-12 h-6 a10 10 0 0 1 -10 -10 v-30 a10 10 0 0 1 10 -10z"></path>
+        <g class="dots"><circle class="dot" style="--i:0" cx="146" cy="59" r="4"></circle><circle class="dot" style="--i:1" cx="160" cy="59" r="4"></circle><circle class="dot" style="--i:2" cx="174" cy="59" r="4"></circle></g>
+      </svg>
+      <p class="ai-tag">会話の仕組みを紹介！</p>
+      <h3><span>会話の意味を読み取る、小さなAIを内蔵！</span></h3>
+      <p>書いた文の意味を、ゲームの中の小さなAIが読み取ります。ヒロインのセリフはすべて書きおろしで、AIが即興でセリフを作るわけではありません。AIはパソコンの中だけで動き、入力した文章をインターネットに送ることはありませんので、ローカルで楽しめます。<br>あなたの文章から会話と物語が生まれる次世代のノベルゲームをお楽しみください。<br></p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ キャラクター ============ -->
+<section class="sec chara" id="chara">
+  <header class="band" data-scene="2"><span class="band-en" aria-hidden="true" style="--len:9">CHARACTER</span><h2 class="band-ja">登場人物</h2></header>
+  <div class="wrap">
+
+    <div class="tabs" role="tablist" aria-label="登場人物">
+      <button role="tab" id="tab-mizuki" aria-controls="p-mizuki" aria-selected="true" class="tab t-mizuki">瑞希</button>
+      <button role="tab" id="tab-miyako" aria-controls="p-miyako" aria-selected="false" class="tab t-miyako" tabindex="-1">美也子</button>
+      <button role="tab" id="tab-reika" aria-controls="p-reika" aria-selected="false" class="tab t-reika" tabindex="-1">麗華</button>
+      <button role="tab" id="tab-takumi" aria-controls="p-takumi" aria-selected="false" class="tab t-takumi" tabindex="-1">拓海</button>
+    </div>
+
+    <article class="cp c-mizuki" id="p-mizuki" role="tabpanel" aria-labelledby="tab-mizuki">
+      <div class="cp-stage">
+        <img class="cp-img" src="img/ch_mizuki_egao.webp" alt="花芽瑞希の立ち絵" width="733" height="1100">
+        <div class="faces" aria-label="表情を変える">
+          <button type="button" data-face="img/ch_mizuki_egao.webp" aria-pressed="true">笑顔</button>
+          <button type="button" data-face="img/ch_mizuki_normal.webp">通常</button>
+          <button type="button" data-face="img/ch_mizuki_tere.webp">照れ</button>
+          <button type="button" data-face="img/ch_mizuki_komari.webp">困り</button>
+        </div>
+      </div>
+      <div class="cp-card">
+        <p class="cp-catch">みんなの人気者。でも、あと一歩が遠い。</p>
+        <h3 class="cp-name"><ruby>花芽<rt>かが</rt></ruby> <ruby>瑞希<rt>みずき</rt></ruby></h3>
+        <p class="cp-line">「悠斗くんは何してるの？たしか部活は入ってなかったよね？」</p>
+        <p>生徒会の副会長で、テニス部のエース。成績も学年トップクラス。誰にでも優しく、みんなの人気者。あなたとは仲が良いけれど、あと一歩が進まない関係。</p>
+        <dl class="cp-prof">
+          <div><dt>誕生日</dt><dd>3月3日</dd></div>
+          <div><dt>血液型</dt><dd>A型</dd></div>
+          <div><dt>身長</dt><dd>158cm</dd></div>
+          <div class="wide"><dt>好きなもの</dt><dd>いちご大福（特に）、映画（一番は恋愛もの）</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="cp c-miyako" id="p-miyako" role="tabpanel" aria-labelledby="tab-miyako" hidden>
+      <div class="cp-stage">
+        <img class="cp-img" src="img/ch_miyako_normal.webp" alt="四宮美也子の立ち絵" width="733" height="1100" loading="lazy">
+        <div class="faces" aria-label="表情を変える">
+          <button type="button" data-face="img/ch_miyako_normal.webp" aria-pressed="true">通常</button>
+          <button type="button" data-face="img/ch_miyako_tun.webp">ツン</button>
+          <button type="button" data-face="img/ch_miyako_tere.webp">照れ</button>
+          <button type="button" data-face="img/ch_miyako_egao.webp">笑顔</button>
+        </div>
+      </div>
+      <div class="cp-card">
+        <p class="cp-catch">口は悪い。でも、根はいい子。</p>
+        <h3 class="cp-name"><ruby>四宮<rt>しのみや</rt></ruby> <ruby>美也子<rt>みやこ</rt></ruby></h3>
+        <p class="cp-line">「…え、アンタもコーヒー好きなの？…ふーん。…今度、淹れてあげてもいいけど」</p>
+        <p>主人公の後ろの席のクラスメイト。駅前の「喫茶ひだまり」で、高1の春からバイトしている。あなたに対してすぐ突っかかってくるけれど、根はいい子。</p>
+        <dl class="cp-prof">
+          <div><dt>誕生日</dt><dd>8月13日</dd></div>
+          <div><dt>血液型</dt><dd>B型</dd></div>
+          <div><dt>身長</dt><dd>157cm</dd></div>
+          <div class="wide"><dt>好きなもの</dt><dd>固めのプリン、コーヒーを淹れること、ラテアートの練習</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="cp c-reika" id="p-reika" role="tabpanel" aria-labelledby="tab-reika" hidden>
+      <div class="cp-stage">
+        <img class="cp-img" src="img/ch_reika_sumashi.webp" alt="橘麗華の立ち絵" width="733" height="1100" loading="lazy">
+        <div class="faces" aria-label="表情を変える">
+          <button type="button" data-face="img/ch_reika_sumashi.webp" aria-pressed="true">すまし</button>
+          <button type="button" data-face="img/ch_reika_egao.webp">笑顔</button>
+          <button type="button" data-face="img/ch_reika_tere.webp">照れ</button>
+          <button type="button" data-face="img/ch_reika_tun.webp">ツン</button>
+        </div>
+      </div>
+      <div class="cp-card">
+        <p class="cp-catch">顔を合わせれば、言い合いになる。</p>
+        <h3 class="cp-name"><ruby>橘<rt>たちばな</rt></ruby> <ruby>麗華<rt>れいか</rt></ruby></h3>
+        <p class="cp-line">「……ごきげんよう。あなたが花屋に？何かの間違いかしら」</p>
+        <p>橘グループのお嬢様。華道とバイオリンの稽古を毎日している。取り巻きは多いけれど、本人はいつも一人。あなたとは、顔を合わせるたびに言い合いになる仲。</p>
+        <dl class="cp-prof">
+          <div><dt>誕生日</dt><dd>10月3日</dd></div>
+          <div><dt>血液型</dt><dd>AB型</dd></div>
+          <div><dt>身長</dt><dd>170cm</dd></div>
+          <div class="wide"><dt>好きなもの</dt><dd>内緒</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="cp c-takumi" id="p-takumi" role="tabpanel" aria-labelledby="tab-takumi" hidden>
+      <div class="cp-stage">
+        <img class="cp-img" src="img/ch_takumi_egao.webp" alt="三上拓海の立ち絵" width="733" height="1100" loading="lazy">
+      </div>
+      <div class="cp-card">
+        <p class="cp-catch">自称・恋愛マスターの親友。</p>
+        <h3 class="cp-name"><ruby>三上<rt>みかみ</rt></ruby> <ruby>拓海<rt>たくみ</rt></ruby></h3>
+        <p class="cp-line">「土曜の夜は夏祭りだろ。今年こそ、誰か誘えよな」</p>
+        <p>あなたの親友。自称「恋愛マスター」（ただし、うまくいった話は聞いたことがない）。遊び方の助言や、ヒロインがどこにいるかの「うわさ」を教えてくれる。</p>
+      </div>
+    </article>
+
+    <p class="chara-hero">主人公（名前は自由に決められます）　高校2年。一人称は「俺」。去年の夏祭りは、拓海と二人だった。</p>
+  </div>
+</section>
+
+<!-- ============ ギャラリー ============ -->
+<section class="sec gallery" id="gallery">
+  <header class="band" data-scene="3"><span class="band-en" aria-hidden="true" style="--len:7">GALLERY</span><h2 class="band-ja">ゲーム画面</h2></header>
+  <div class="wrap">
+    <ul class="gal gal-ss">
+      <li><button class="shot" type="button" data-full="img/ss_coffee.webp" data-cap="会話：美也子"><img src="img/ss_coffee.webp" alt="美也子が「今度、淹れてあげてもいいけど」と答えている画面" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/ss_reika.webp" data-cap="会話：麗華"><img src="img/ss_reika.webp" alt="夕方の花屋で麗華と会った画面" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/ss_title.webp" data-cap="タイトル画面"><img src="img/ss_title.webp" alt="タイトル画面" width="1600" height="900" loading="lazy"></button></li>
+    </ul>
+    <h3 class="sub">スチルCG（一部）</h3>
+    <ul class="gal">
+      <li><button class="shot" type="button" data-full="img/cg_ev_yudachi.webp" data-cap="夕立"><img src="img/cg_ev_yudachi.webp" alt="昇降口で夕立を見上げる瑞希" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/cg_out_miyako_park.webp" data-cap="放課後デート：公園"><img src="img/cg_out_miyako_park.webp" alt="公園のベンチでクッキーの紙袋を差し出す美也子" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/cg_ev_kuruma.webp" data-cap="迎えの車が来ない"><img src="img/cg_ev_kuruma.webp" alt="夕方の駅前で腕時計を見る麗華" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/cg_out_mizuki_aquarium.webp" data-cap="放課後デート：水族館"><img src="img/cg_out_mizuki_aquarium.webp" alt="水族館のペンギンの水槽の前ではしゃぐ瑞希" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/cg_ev_futari.webp" data-cap="中庭の二人"><img src="img/cg_ev_futari.webp" alt="中庭のベンチで話す瑞希と美也子" width="1600" height="900" loading="lazy"></button></li>
+      <li><button class="shot" type="button" data-full="img/cg_out_reika_cinema.webp" data-cap="放課後デート：映画館"><img src="img/cg_out_reika_cinema.webp" alt="映画館の売店でポップコーンに目を丸くする麗華" width="1600" height="900" loading="lazy"></button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 実況・配信 ============ -->
+<section class="sec stream" id="stream">
+  <header class="band" data-scene="4"><span class="band-en" aria-hidden="true" style="--len:13">FOR STREAMERS</span><h2 class="band-ja">実況・配信についてのお知らせ</h2></header>
+  <div class="wrap">
+    <div class="stream-card paper">
+      <p class="stream-big">本ゲームに対する、実況・配信・動画の投稿は、<strong>自由です。</strong></p>
+      <ul class="checks">
+        <li>作者への連絡は、いりません。</li>
+        <li>収益化（広告・投げ銭・メンバーシップなど）をしてもかまいません。</li>
+        <li>ゲームの中で流れるBGM・効果音は、そのまま配信や動画に入ってかまいません。</li>
+        <li>動画や配信のタイトルか説明に、「サマーリプライ」と入れてください。</li>
+        <li>本ゲームの内容を含むコンテンツ等を投稿する際は、常識の範囲内でお使いください。</li>
+      </ul>
+      <p class="stream-tip gap">返事は自由入力なので、<strong>視聴者さんに返事を考えてもらう</strong>遊び方もおすすめです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ダウンロード ============ -->
+<section class="sec dl" id="download">
+  <header class="band" data-scene="5"><span class="band-en" aria-hidden="true" style="--len:8">DOWNLOAD</span><h2 class="band-ja">ダウンロード</h2></header>
+  <div class="wrap">
+    <div class="dl-grid">
+      <div class="dl-card">
+        <p class="dl-title">サマーリプライ <span>Ver.1.0</span></p>
+        <p class="dl-price">無料</p>
+        <a class="btn-dl btn-dl-big js-dl" href="#download" aria-disabled="true"><span>公開準備中</span></a>
+        <p class="dl-size">zip 378MB（展開すると 558MB）</p>
+        <p class="dl-release js-release" hidden></p>
+      </div>
+      <div class="dl-info">
+        <h3 class="sub">動作環境</h3>
+        <dl class="spec">
+          <div><dt>OS</dt><dd>Windows 10／11（64ビット）</dd></div>
+          <div><dt>メモリ</dt><dd>4GB以上（8GB以上をおすすめ）</dd></div>
+          <div><dt>空き容量</dt><dd>約1GB</dd></div>
+          <div><dt>画面</dt><dd>1280×720 以上</dd></div>
+          <div><dt>ネット接続</dt><dd>いりません</dd></div>
+        </dl>
+        <p class="spec-note">Mac・スマートフォンでは遊べません。</p>
+        <h3 class="sub">遊び方</h3>
+        <ol class="steps">
+          <li>zip をダウンロードして、右クリック →「すべて展開」</li>
+          <li>できたフォルダの中の「サマーリプライ.exe」をダブルクリック</li>
+          <li>「WindowsによってPCが保護されました」と出たときは、「詳細情報」→「実行」を押してください</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI の利用・クレジット ============ -->
+<section class="sec info" id="credit">
+  <div class="wrap info-grid">
+    <div>
+      <h2 class="sub">AIの利用について</h2>
+      <p>本作の立ち絵・背景・スチルCG・タイトル画面・ロゴは、画像生成AIを利用して制作しています。台本・セリフの多くは、文章のAI（Claude）が下書きしたものを、作者が確認・修正して使っています。</p>
+      <p>また、プレイヤーの入力した文章を読み取るために、言語のAI（Ruri v3 30m）をゲームの中で使っています。入力した文章が、パソコンの外に送られることはありません。</p>
+    </div>
+    <div>
+      <h2 class="sub">クレジット</h2>
+      <dl class="credit">
+        <div class="js-author-row" hidden><dt>制作</dt><dd class="js-author"></dd></div>
+        <div><dt>ゲームエンジン</dt><dd>TyranoScript（STRIKEWORKS / Shikemokumk）</dd></div>
+        <div><dt>BGM</dt><dd><a href="https://amachamusic.chagasi.com" rel="noopener" target="_blank">甘茶の音楽工房</a>／しゃろう「ステラと塔の物語」<span class="js-ending-music"></span></dd></div>
+        <div><dt>効果音</dt><dd><a href="https://soundeffect-lab.info" rel="noopener" target="_blank">効果音ラボ</a></dd></div>
+        <div><dt>会話を読み取るAI</dt><dd>Ruri v3 30m（cl-nagoya）、Transformers.js（Hugging Face）、ONNX Runtime（Microsoft）</dd></div>
+        <div><dt>PC版の動作</dt><dd>Electron</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <img src="img/logo.webp" alt="サマーリプライ" width="1100" height="247" class="foot-logo" loading="lazy">
+  <ul class="foot-links">
+    <li class="js-x" hidden><a href="#" rel="noopener" target="_blank">X</a></li>
+    <li class="js-note" hidden><a href="#" rel="noopener" target="_blank">note</a></li>
+    <li class="js-contact" hidden><a href="#">お問い合わせ</a></li>
+  </ul>
+  <p class="foot-copy">© 2026 <span class="js-author-copy">サマーリプライ</span></p>
+  <p class="foot-note">本作の画像・音楽・文章などを、ゲームやこのサイトから取り出して転載・再配布することは禁止です。</p>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="画像を大きく見る">
+  <figure>
+    <img alt="" width="1600" height="900">
+    <figcaption></figcaption>
+  </figure>
+  <button type="button" class="lb-prev" aria-label="前の画像">‹</button>
+  <button type="button" class="lb-next" aria-label="次の画像">›</button>
+  <button type="button" class="lb-close" aria-label="閉じる">×</button>
+</dialog>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

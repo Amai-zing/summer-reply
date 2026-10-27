@@ -4,7 +4,7 @@
    ========================================================= */
 window.SITE = {
   // 作者名・サークル名（例：'○○工房'）
-  author: '',
+  author: '亜鳴 仁求',
 
   // ゲームの zip をダウンロードする場所の URL（例：GitHub のリリースの URL）
   downloadUrl: 'https://github.com/Amai-zing/summer-reply/releases/download/v1.0/SummerReply_v1.0.zip',
@@ -22,5 +22,5 @@ window.SITE = {
   contact: '',
 
   // エンディングの曲の作者（分かったら書く）
-  endingMusic: ''
+  endingMusic: '稿屋 隆「いつかの夢」（OpenTracks）'
 };
